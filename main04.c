@@ -114,7 +114,7 @@ int main(int argc, char **argv)
 
 	if( name_b )
 	{
-		res_read = read_matrix(b, 1, m, name_b);
+		res_read = read_matrix(b, m, 1, name_b);
 
 		if( res_read!=MATR_SUCCESS )
 		{
@@ -137,7 +137,7 @@ int main(int argc, char **argv)
 		}
 	} else
 	{
-		init_matrix(b, 1, m);
+		init_matrix(b, m, 1);
 	}
 
 	printf("Matrix A:\n");
@@ -145,7 +145,7 @@ int main(int argc, char **argv)
 	printf("Matrix X:\n");
 	print_matrix(x, n, 1);
 	printf("Matrix B:\n");
-	print_matrix(b, 1, m);
+	print_matrix(b, m, 1);
 	t_beg = clock();
 	res = solve04(a, x, b, m, n);
 	printf("Result:\t%lf\nElapsed:\t%.2lf sec\n", res, (double)(clock() - t_beg)/CLOCKS_PER_SEC);

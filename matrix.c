@@ -51,7 +51,7 @@ void print_matrix(double *a, int m, int n)
 	m_max = (m>M_MAX ? M_MAX : m);
 	n_max = (n>N_MAX ? N_MAX : n);
 
-	for( b = a; b<(a + m_max*n_max); b += n_max )
+	for( b = a; b<(a + m_max*n); b += n )
 	{
 		for( j = 0; j<n_max; j++ )
 			printf("\t%lf", b[j]);

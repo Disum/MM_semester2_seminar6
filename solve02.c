@@ -4,10 +4,10 @@
 /* a - матрица m*n */
 double solve02(double *a, int m, int n)
 {
-	int i;
+	int i, j;
 	double *b, max = 0, sum;
 
-	for( b = a; b<(a + n); b++ )
+	for( j = 0, b = a; j<n; j++, b++ )
 	{
 		sum = 0;
 
