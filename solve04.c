@@ -16,7 +16,7 @@ double solve04(double *a, double *x, double *b, int m, int n)
 			buffer += c[j]*x[j];
 		}
 
-		buffer = fabs(buffer + b[i]);
+		buffer = fabs(buffer - b[i]);
 		if( buffer>max )
 			max = buffer;
 	}

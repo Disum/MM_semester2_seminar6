@@ -16,7 +16,7 @@ double solve03(double *a, double *x, double *b, int m, int n)
 			buffer += c[j]*x[j];
 		}
 
-		res += fabs(buffer + b[i]);
+		res += fabs(buffer - b[i]);
 	}
 
 	return res;
